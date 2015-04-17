@@ -16,21 +16,7 @@ export default Ember.ArrayController.extend({
 	order: 'desc',
 	sortBy: 'id',
 
-	//pageBinding: "content.page",
-
-	//setupController: function(controller, model){
-	//	this._super(controller, model);
-	//	controller.setProperties({
-	//		page: this.get('page')
-	//	});
-	//},
-
-	isExpanded: false,
-
 	actions: {
-		log: function() {
-			console.log("beep");
-		},
 		prevPage: function() {
 			var page = this.get('page');
 			page--;
@@ -44,15 +30,6 @@ export default Ember.ArrayController.extend({
 			this.set('page', page);
 
 			this.send('invalidateModel');
-		},
-		toggleExpand: function() {
-			var isExpanded = this.get('isExpanded');
-			if(isExpanded == true) {
-				isExpanded = false;
-			} else {
-				isExpanded = true;
-			}
-			this.set('isExpanded', isExpanded);
 		},
 		sortBy: function(_sortBy){
 			var sortBy = this.get('sortBy');
@@ -75,4 +52,6 @@ export default Ember.ArrayController.extend({
 			this.send('invalidateModel');
 		},
 	}
+
+
 });
