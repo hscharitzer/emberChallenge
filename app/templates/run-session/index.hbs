@@ -7,6 +7,6 @@ template: run-session/index<br>
 		<td>{{moment run.end_time 'h:mm:ss'}}</td>
 		<td>{{duration run.duration 'minutes'}}</td>
 		<td>{{run.distance}} m</td>
-		<td>{{#link-to 'run_session.show' run}}{{run.id}}{{/link-to}}</td>
+		<td>{{#link-to 'show' run.id}}{{run.id}}{{/link-to}}</td>
 	</tr>
 {{/each}}

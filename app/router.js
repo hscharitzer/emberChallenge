@@ -6,8 +6,10 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
-  this.resource('run_session', function() {
-    this.route('show', { path: '/:run_session_id' });
-  });
+    this.resource('run_session', function() {
+        //this.route('show', { path: '/:run_session_id' });
+    });
+
+    this.route('show', { path: '/run_session/:run_session_id' });
 });
 
