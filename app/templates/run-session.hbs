@@ -1,23 +1,45 @@
 
-template: run-session<br>
+<div class="row">
+	<div class="col-xs-12">
 
 
-<table class="table">
-	<tr>
-		<th><button {{action 'sortBy' 'id'}}>id</button></th>
-		<th><button {{action 'sortBy' 'start_time'}}>start_time</button></th>
-		<th><button {{action 'sortBy' 'end_time'}}>end_time</button></th>
-		<th><button {{action 'sortBy' 'duration'}}>duration</button></th>
-		<th><button {{action 'sortBy' 'distance'}}>distance</button></th>
-	</tr>
+		<div class="table-responsive">
+			<table class="table table-bordered">
+				<tr>
+					<th class="hidden-xs"><button {{action 'sortBy' 'id'}}>id</button></th>
+					<th><button {{action 'sortBy' 'start_time'}}>start_time</button></th>
+					<th class="hidden-xs"><button {{action 'sortBy' 'end_time'}}>end_time</button></th>
+					<th><button {{action 'sortBy' 'duration'}}>duration</button></th>
+					<th><button {{action 'sortBy' 'distance'}}>distance</button></th>
+					<th>{{fa-icon "map-marker"}}</th>
+					<th></th>
+				</tr>
 
-	{{outlet}}
+				{{outlet}}
 
-</table>
+			</table>
+		</div>
 
-page: {{page}}
+	</div>
+</div>
 
-<button {{action 'prevPage'}}>prev</button>
-<button {{action 'nextPage'}}>next</button>
+
+<div class="row">
+	<div class="col-xs-4">
+		<button {{action 'prevPage'}} class="btn btn-default btn-block">{{fa-icon "chevron-left"}}</button>
+	</div>
+	<div class="col-xs-4">
+		<p class="text-center">
+			{{page}} / {{total}}
+		</p>
+	</div>
+	<div class="col-xs-4">
+		<button {{action 'nextPage'}} class="btn btn-default btn-block">{{fa-icon "chevron-right"}}</button>
+	</div>
+</div>
+
+
+
+
 
 

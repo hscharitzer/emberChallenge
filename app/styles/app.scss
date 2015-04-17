@@ -1,0 +1,39 @@
+@import 'bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap';
+@import 'bower_components/fontawesome/scss/font-awesome';
+
+
+html, body {
+  margin: 20px;
+	background: #e1e5e8;
+}
+
+body {
+  font-size: 18px;
+}
+
+.btn {
+  font-size: 18px;
+}
+
+.table {
+  background-color: rgb(255, 255, 255);
+
+  border-radius: 4px;
+
+  td, th {
+	padding: 0.3em 0.3em;
+	border-bottom: 1px solid rgb(221, 221, 221);
+  }
+
+  tr > td:first-of-type, tr > th:first-of-type {
+	padding-left: 0.5em;
+  }
+}
+
+
+
+
+
+
+
+

@@ -6,6 +6,10 @@ export default Ember.Route.extend({
 
 		return this.store.find('run_session', params);
 	},
+	setupController: function(controller, model) {
+		this._super.apply(this, arguments);
+		controller.set('total', model.get('meta.pagination.available_pages'));
+	},
 	actions: {
 		invalidateModel: function() {
 			Ember.Logger.log('Route is now refreshing...');
