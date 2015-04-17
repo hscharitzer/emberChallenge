@@ -1,4 +1,6 @@
 
+template: run-session<br>
+
 
 <table class="table">
 	<tr>
@@ -9,11 +11,7 @@
 		<th><button {{action 'sortBy' 'distance'}}>distance</button></th>
 	</tr>
 
-	{{#each run in this}}
-		<tr>
-			<td>{{run.id}}</td><td>{{moment run.start_time 'DD.MM.YYYY h:mm:ss'}}</td><td>{{moment run.end_time 'h:mm:ss'}}</td><td>{{duration run.duration 'minutes'}}</td><td>{{run.distance}} m</td>
-		</tr>
-	{{/each}}
+	{{outlet}}
 
 </table>
 
@@ -21,6 +19,3 @@
 <button {{action 'nextPage'}}>next</button>
 
 
-
-
-{{outlet}}

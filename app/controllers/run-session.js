@@ -35,8 +35,8 @@ export default Ember.ArrayController.extend({
 			var sortBy = this.get('sortBy');
 			var order = this.get('order');
 
-			if(_sortBy == sortBy) {
-				if(order == 'desc') {
+			if(_sortBy === sortBy) {
+				if(order === 'desc') {
 					order = 'asc';
 				} else {
 					order = 'desc';
@@ -52,6 +52,4 @@ export default Ember.ArrayController.extend({
 			this.send('invalidateModel');
 		},
 	}
-
-
 });

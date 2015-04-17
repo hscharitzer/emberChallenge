@@ -1,0 +1,18 @@
+template: run-session/show<br>
+
+{{#link-to 'run_session.index'}} &lt; back{{/link-to}}
+
+<ul>
+	<li>{{this.model.id}}</li>
+	<li>{{moment this.model.start_time 'DD.MM.YYYY h:mm:ss'}}</li>
+	<li>{{moment this.model.end_time 'DD.MM.YYYY  h:mm:ss'}}</li>
+	<li>{{duration this.model.duration 'minutes'}}</li>
+	<li>{{this.model.distance}} m</li>
+	<li>{{this.model.encoded_trace}}</li>
+	<li>{{this.model.sport_type_id}}</li>
+</ul>
+
+<div id="map-canvas">
+
+</div>
+
