@@ -13,6 +13,10 @@ body {
 
 .btn {
   font-size: 18px;
+
+  &.btn-primary {
+	background-color: #007aff;
+  }
 }
 
 .table {
@@ -77,6 +81,10 @@ body {
 
 hr {
   border-top: 1px solid #a6b0b9;
+}
+
+.fatal-error {
+  font-size: 240px;
 }
 
 
