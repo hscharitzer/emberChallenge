@@ -19,17 +19,22 @@ export default Ember.ArrayController.extend({
 	actions: {
 		prevPage: function() {
 			var page = this.get('page');
-			page--;
-			this.set('page', page);
+			if(page > 1) {
+				page--;
+				this.set('page', page);
 
-			this.send('invalidateModel');
+				this.send('invalidateModel');
+			}
 		},
 		nextPage: function() {
 			var page = this.get('page');
-			page++;
-			this.set('page', page);
+			var total = this.get('total');
+			if(page < total) {
+				page++;
+				this.set('page', page);
 
-			this.send('invalidateModel');
+				this.send('invalidateModel');
+			}
 		},
 		sortBy: function(_sortBy){
 			var sortBy = this.get('sortBy');

@@ -25,7 +25,7 @@ body {
 	border-bottom: 1px solid rgb(221, 221, 221);
   }
 
-  tr:first-of-type {
+  tr.table-header {
 	background-color: #007aff;
 	color: #fff;
 
@@ -73,6 +73,10 @@ body {
 	text-align: center;
 	vertical-align: middle;
   }
+}
+
+hr {
+  border-top: 1px solid #a6b0b9;
 }
 
 
