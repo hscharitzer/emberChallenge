@@ -2,11 +2,14 @@
 {{#each run in this}}
 		<tr {{action 'show' run.id}}>
 			<td class="hidden-xs">{{run.id}}</td>
-			<td>{{moment run.start_time 'DD.MM.YYYY h:mm:ss'}}</td>
-			<td class="hidden-xs">{{moment run.end_time 'h:mm:ss'}}</td>
-			<td>{{duration run.duration 'minutes'}}</td>
-			<td>{{run.distance}} m</td>
-			<td></td>
-			<td class="sr-only">{{#link-to 'show' run.id}}{{run.id}}{{/link-to}}</td>
+			<td class="text-right">{{moment run.start_time 'DD.MM.YYYY h:mm:ss'}}</td>
+			<td class="hidden-xs text-right">{{moment run.end_time 'h:mm:ss'}}</td>
+			<td class="text-right">{{run.corrected_duration}} / {{duration run.corrected_duration 'minutes'}}</td>
+			<td class="text-right">{{run.distance}} m</td>
+			<td>
+				{{#if run.has_trace}}
+					{{fa-icon "map-marker"}}
+				{{/if}}
+			</td>
 		</tr>
 {{/each}}

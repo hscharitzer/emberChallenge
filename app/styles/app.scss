@@ -3,7 +3,7 @@
 
 
 html, body {
-  margin: 20px;
+  //margin: 20px;
 	background: #e1e5e8;
 }
 
@@ -21,8 +21,25 @@ body {
   border-radius: 4px;
 
   td, th {
-	padding: 0.3em 0.3em;
+	padding: 0.5em 0.5em;
 	border-bottom: 1px solid rgb(221, 221, 221);
+  }
+
+  tr:first-of-type {
+	background-color: #007aff;
+	color: #fff;
+
+	th {
+	  border-right: 1px solid white;
+
+	  &:first-of-type {
+		border-top-left-radius: 4px;
+	  }
+	  &:last-of-type {
+		border-right: none;
+		border-top-right-radius: 4px;
+	  }
+	}
   }
 
   tr {
@@ -31,6 +48,17 @@ body {
 	}
 
 	cursor: pointer;
+  }
+
+  tr:last-of-type {
+	> td {
+	  border-bottom: none;
+	}
+  }
+
+  &.table-runs {
+  	//font-family: monospace;
+	//font-family: 'Inconsolata', monospace;
   }
 }
 

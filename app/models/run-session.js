@@ -13,5 +13,13 @@ export default DS.Model.extend({
 	end_time:    DS.attr('date'),
 	duration:    DS.attr('number'),
 	distance:    DS.attr('number'),
-	encoded_trace: DS.attr('string')
+	encoded_trace: DS.attr('string'),
+	corrected_duration: function() {
+		var duration = parseInt(this.get('duration'), 10);
+		return  duration/1000;
+	}.property('duration'),
+	has_trace: function() {
+		var encodedTrace = this.get('encoded_trace');
+		return  encodedTrace ? true : false;
+	}.property('encoded_trace')
 });

@@ -2,22 +2,21 @@
 	<div class="col-xs-12">
 
 
-		<div class="table-responsive">
-			<table class="table table-bordered">
+		<!--<div class="table-responsive">-->
+			<table class="table table-runs">
 				<tr>
-					<th class="hidden-xs"><button {{action 'sortBy' 'id'}}>id</button></th>
-					<th><button {{action 'sortBy' 'start_time'}}>start_time</button></th>
-					<th class="hidden-xs"><button {{action 'sortBy' 'end_time'}}>end_time</button></th>
-					<th><button {{action 'sortBy' 'duration'}}>duration</button></th>
-					<th><button {{action 'sortBy' 'distance'}}>distance</button></th>
+					<th class="hidden-xs" {{action 'sortBy' 'id'}}>id</th>
+					<th class="text-right" {{action 'sortBy' 'start_time'}}>start_time</th>
+					<th class="hidden-xs text-right" {{action 'sortBy' 'end_time'}}>end_time</th>
+					<th class="text-right" {{action 'sortBy' 'duration'}}>duration</th>
+					<th class="text-right" {{action 'sortBy' 'distance'}}>distance</th>
 					<th>{{fa-icon "map-marker"}}</th>
-					<th class="sr-only"></th>
 				</tr>
 
 				{{outlet}}
 
 			</table>
-		</div>
+		<!--</div>-->
 
 	</div>
 </div>
