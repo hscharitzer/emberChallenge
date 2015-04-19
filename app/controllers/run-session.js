@@ -50,6 +50,6 @@ export default Ember.ArrayController.extend({
 			this.set('order', order);
 
 			this.send('invalidateModel');
-		},
+		}
 	}
 });

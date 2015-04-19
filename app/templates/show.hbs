@@ -1,17 +1,27 @@
-template: show<br>
-
-{{#link-to 'run_session.index'}} <button class="btn btn-default">{{fa-icon "chevron-left"}}</button>{{/link-to}}
-
-<ul>
-	<li>{{this.model.id}}</li>
-	<li>{{moment this.model.start_time 'DD.MM.YYYY h:mm:ss'}}</li>
-	<li>{{moment this.model.end_time 'DD.MM.YYYY  h:mm:ss'}}</li>
-	<li>{{duration this.model.duration 'minutes'}}</li>
-	<li>{{this.model.distance}} m</li>
-	<li>{{this.model.encoded_trace}}</li>
-	<li>{{this.model.sport_type_id}}</li>
-</ul>
-
-<div id="map-canvas">
-
+<div class="row">
+	<div class="col-xs-12">
+		{{#link-to 'run_session.index'}} <button class="btn btn-primary">{{fa-icon "chevron-left"}}</button>{{/link-to}}
+	</div>
 </div>
+
+
+<div class="row">
+	<div class="col-xs-12 col-md-6">
+		<ul>
+			<li>{{this.model.id}}</li>
+			<li>{{moment this.model.start_time 'DD.MM.YYYY h:mm:ss'}}</li>
+			<li>{{moment this.model.end_time 'DD.MM.YYYY  h:mm:ss'}}</li>
+			<li>{{duration this.model.duration 'minutes'}}</li>
+			<li>{{this.model.distance}} m</li>
+			<li>{{this.model.encoded_trace}}</li>
+			<li>{{this.model.sport_type_id}}</li>
+		</ul>
+
+	</div>
+	<div class="col-xs-12 col-md-6">
+		<div id="map-canvas">
+
+		</div>
+	</div>
+</div>
+

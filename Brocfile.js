@@ -24,6 +24,8 @@ var app = new EmberApp();
 // Bootstrap
 app.import('bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js');
 
+//var loading = require('ember-cli-loading');
+
 // Glyphicons
 //var pickFiles = require('broccoli-static-compiler');
 //var bootstrapFonts = pickFiles('bower_components/bootstrap-sass-official/assets/fonts/bootstrap', {
