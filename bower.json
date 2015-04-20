@@ -16,6 +16,7 @@
     "bootstrap-sass": "~3.3.4",
     "ember-cli-moment-shim": "~0.1.0",
     "bootstrap-sass-official": "~3.3.4",
-    "fontawesome": "~4.3.0"
+    "fontawesome": "~4.3.0",
+    "materialize": "~0.96.0"
   }
 }

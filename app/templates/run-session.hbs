@@ -1,38 +1,35 @@
 <div class="row">
-	<div class="col-xs-12">
+	<div class="col s12">
 
+		<table class="bordered z-depth-1 run-table">
+			<tr class="table-header">
+				<th class="hide-on-small-only text-right" {{action 'sortBy' 'id'}}>id</th>
+				<th class="text-right" {{action 'sortBy' 'start_time'}}>start_time</th>
+				<th class="hide-on-small-only text-right" {{action 'sortBy' 'end_time'}}>end_time</th>
+				<th class="text-right" {{action 'sortBy' 'duration'}}>duration</th>
+				<th class="text-right" {{action 'sortBy' 'distance'}}>distance</th>
+				<th>{{fa-icon "map-marker"}}</th>
+			</tr>
 
-		<!--<div class="table-responsive">-->
-			<table class="table table-runs">
-				<tr class="table-header">
-					<th class="hidden-xs" {{action 'sortBy' 'id'}}>id</th>
-					<th class="text-right" {{action 'sortBy' 'start_time'}}>start_time</th>
-					<th class="hidden-xs text-right" {{action 'sortBy' 'end_time'}}>end_time</th>
-					<th class="text-right" {{action 'sortBy' 'duration'}}>duration</th>
-					<th class="text-right" {{action 'sortBy' 'distance'}}>distance</th>
-					<th>{{fa-icon "map-marker"}}</th>
-				</tr>
+			{{outlet}}
 
-				{{outlet}}
-
-			</table>
-		<!--</div>-->
+		</table>
 
 	</div>
 </div>
 
 
 <div class="row">
-	<div class="col-xs-4">
-		<button {{action 'prevPage'}} class="btn btn-default btn-block">{{fa-icon "chevron-left"}}</button>
+	<div class="col s4 btn-container">
+		<button {{action 'prevPage'}} class="btn btn-prev">{{fa-icon "chevron-left"}}</button>
 	</div>
-	<div class="col-xs-4">
-		<p class="text-center">
+	<div class="col s4">
+		<p class="pagination-counter">
 			{{page}} / {{total}}
 		</p>
 	</div>
-	<div class="col-xs-4">
-		<button {{action 'nextPage'}} class="btn btn-default btn-block">{{fa-icon "chevron-right"}}</button>
+	<div class="col s4 btn-container">
+		<button {{action 'nextPage'}} class="btn btn-next">{{fa-icon "chevron-right"}}</button>
 	</div>
 </div>
 

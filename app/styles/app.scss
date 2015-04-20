@@ -1,96 +1,42 @@
-@import 'bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap';
-@import 'bower_components/fontawesome/scss/font-awesome';
+@import 'bower_components/materialize/sass/components/color';
+@import "custom";
+@import 'materialize';
 
 
-html, body {
-  //margin: 20px;
-	background: #e1e5e8;
-}
-
-body {
-  font-size: 18px;
-}
-
-.btn {
-  font-size: 18px;
-
-  &.btn-primary {
-	background-color: #007aff;
+/* FIXME: Workaround for https://github.com/Dogfalo/materialize/issues/1079 */
+@each $mdi-icon-name, $mdi-icon-value in $mdi-list-icons {
+  .#{$mdi-prefix}#{$mdi-icon-name}:before {
+    content: "\""+ $mdi-icon-value +"\"";
   }
 }
 
-.table {
-  background-color: rgb(255, 255, 255);
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
 
-  border-radius: 4px;
+.container {
+  margin-top: 20px;
+}
 
-  td, th {
-	padding: 0.5em 0.5em;
-	border-bottom: 1px solid rgb(221, 221, 221);
+.btn-container {
+  .btn-prev {
+	float: right;
   }
-
-  tr.table-header {
-	background-color: #007aff;
-	color: #fff;
-
-	th {
-	  border-right: 1px solid white;
-
-	  &:first-of-type {
-		border-top-left-radius: 4px;
-	  }
-	  &:last-of-type {
-		border-right: none;
-		border-top-right-radius: 4px;
-	  }
-	}
+  .btn-next {
+	float: left;
   }
+}
 
+.pagination-counter {
+  text-align: center;
+  margin-top:9px;
+}
+
+.run-table {
   tr {
-	 > td:first-of-type,  > th:first-of-type {
-	  padding-left: 0.5em;
-	}
-
 	cursor: pointer;
   }
-
-  tr:last-of-type {
-	> td {
-	  border-bottom: none;
-	}
-  }
-
-  &.table-runs {
-  	//font-family: monospace;
-	//font-family: 'Inconsolata', monospace;
-  }
 }
-
-.center-container {
-  display: table;
-  width: 100%;
-  //height: 100%;
-  height: 340px;
-
-  .centered {
-	display: table-cell;
-	text-align: center;
-	vertical-align: middle;
-  }
-}
-
-hr {
-  border-top: 1px solid #a6b0b9;
-}
-
-.fatal-error {
-  font-size: 240px;
-}
-
-
-
-
-
-
-
-

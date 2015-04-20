@@ -1,14 +1,12 @@
-<div class="row">
-	<div class="col-xs-12">
-		{{#link-to 'run_session.index'}} <button class="btn btn-primary">{{fa-icon "chevron-left"}} &nbsp; Back</button>{{/link-to}}
-	</div>
-</div>
 
-<hr>
+
+<h3>Run {{this.model.id}}</h3>
+
+<div class="divider"></div>
 
 <div class="row">
-	<div class="col-xs-12">
-		<table class="table table-runs">
+	<div class="col s12">
+		<table>
 			<tr>
 				<td>id</td><td>{{this.model.id}}</td>
 			</tr>
@@ -32,5 +30,11 @@
 
 		</table>
 
+	</div>
+</div>
+
+<div class="row">
+	<div class="col s12">
+		{{#link-to 'run_session.index'}} <button class="btn btn-primary">{{fa-icon "chevron-left"}} &nbsp; Back</button>{{/link-to}}
 	</div>
 </div>
