@@ -1,40 +1,43 @@
+<div class="container">
 
+	<h3>Run {{this.model.id}}</h3>
 
-<h3>Run {{this.model.id}}</h3>
+	<div class="divider"></div>
 
-<div class="divider"></div>
+	<div class="row">
+		<div class="col s12">
+			<table>
+				<tr>
+					<td>id</td><td>{{this.model.id}}</td>
+				</tr>
+				<tr>
+					<td>start_time</td><td>{{moment this.model.start_time 'DD.MM.YYYY h:mm:ss'}}</td>
+				</tr>
+				<tr>
+					<td>end_time</td><td>{{moment this.model.end_time 'DD.MM.YYYY  h:mm:ss'}}</td>
+				</tr>
+				<tr>
+					<td>duration</td><td>{{duration this.model.duration 'minutes'}}</td>
+				</tr>
+				<tr>
+					<td>distance</td><td>{{this.model.distance}} m</td>
+				</tr>
+				<tr>
+					<td>{{fa-icon "map-marker"}}</td><td>{{this.model.encoded_trace}}</td>
+				</tr>
 
-<div class="row">
-	<div class="col s12">
-		<table>
-			<tr>
-				<td>id</td><td>{{this.model.id}}</td>
-			</tr>
-			<tr>
-				<td>start_time</td><td>{{moment this.model.start_time 'DD.MM.YYYY h:mm:ss'}}</td>
-			</tr>
-			<tr>
-				<td>end_time</td><td>{{moment this.model.end_time 'DD.MM.YYYY  h:mm:ss'}}</td>
-			</tr>
-			<tr>
-				<td>duration</td><td>{{duration this.model.duration 'minutes'}}</td>
-			</tr>
-			<tr>
-				<td>distance</td><td>{{this.model.distance}} m</td>
-			</tr>
-			<tr>
-				<td>{{fa-icon "map-marker"}}</td><td>{{this.model.encoded_trace}}</td>
-			</tr>
+				{{outlet}}
 
-			{{outlet}}
+			</table>
 
-		</table>
-
+		</div>
 	</div>
+
+	<div class="row">
+		<div class="col s12">
+			{{#link-to 'run_session.index'}} <button class="btn btn-primary">{{fa-icon "chevron-left"}} &nbsp; Back</button>{{/link-to}}
+		</div>
+	</div>
+
 </div>
 
-<div class="row">
-	<div class="col s12">
-		{{#link-to 'run_session.index'}} <button class="btn btn-primary">{{fa-icon "chevron-left"}} &nbsp; Back</button>{{/link-to}}
-	</div>
-</div>
