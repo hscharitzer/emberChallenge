@@ -22,18 +22,17 @@
 				<tr>
 					<td>distance</td><td>{{this.model.distance}} m</td>
 				</tr>
-				<tr>
-					<td>{{fa-icon "map-marker"}}</td><td>{{this.model.encoded_trace}}</td>
-				</tr>
 			</table>
 
 		</div>
 
+		{{#if this.model.encoded_trace}}
 		<div class="col s12 l6">
 			<div id="run-trace" class="run-trace" data-trace="{{this.model.encoded_trace}}">
 
 			</div>
 		</div>
+		{{/if}}
 	</div>
 
 
