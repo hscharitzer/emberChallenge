@@ -36,7 +36,6 @@ export default Ember.Route.extend({
 	},
 	actions: {
 		invalidateModel: function() {
-			Ember.Logger.log('Route is now refreshing...');
 			this.refresh();
 		}
 	}
