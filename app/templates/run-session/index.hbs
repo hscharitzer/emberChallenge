@@ -4,7 +4,7 @@
 			<td class="hide-on-small-only text-right">{{run.id}}</td>
 			<td class="text-right">{{moment run.start_time 'DD.MM.YYYY h:mm:ss'}}</td>
 			<td class="hide-on-small-only text-right">{{moment run.end_time 'h:mm:ss'}}</td>
-			<td class="text-right">{{run.corrected_duration}}</td>
+			<td class="text-right">{{run.duration}}</td>
 			<td class="text-right">{{run.distance}} m</td>
 			<td>
 				{{#if run.has_trace}}
