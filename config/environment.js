@@ -34,8 +34,8 @@ module.exports = function(environment) {
 		  'script-src': "'self' 'unsafe-inline' 'unsafe-eval' https://*.gstatic.com https://*.googleapis.com/",
 		  'font-src': "'self' http://fonts.googleapis.com https://fonts.gstatic.com", // Allow fonts to be loaded from http://fonts.gstatic.com
 		  'connect-src': "'self' http://intense-bastion-3210.herokuapp.com", // Allow data (ajax/websocket) from api.mixpanel.com and custom-api.local
-		  'img-src': "'self' https://*.googleapis.com https://maps.gstatic.com",
-		  'style-src': "'self' 'unsafe-inline' http://fonts.googleapis.com https://fonts.gstatic.com https://fonts.googleapis.com/", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
+		  'img-src': "'self' https://*.googleapis.com https://*.gstatic.com",
+		  'style-src': "'self' 'unsafe-inline' https://*.gstatic.com https://*.googleapis.com/", // Allow inline styles and loaded CSS from http://fonts.googleapis.com
 		  'media-src': "'self'"
 	  }
   }

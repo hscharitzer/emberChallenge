@@ -10,8 +10,12 @@ export default Ember.View.extend({
 				zoom:5,
 				mapTypeId:google.maps.MapTypeId.ROADMAP
 			};
-			var map = new google.maps.Map(document.getElementById("run-trace"),mapProp);
 
+			var mapContainer = $("#run-trace");
+			var map = new google.maps.Map(mapContainer[0] ,mapProp);
+			var encodedTrace = mapContainer.data('trace');
+			var decoded = google.maps.geometry.encoding.decodePath(encodedTrace);
+			console.log(decoded);
 		});
 	}
 });

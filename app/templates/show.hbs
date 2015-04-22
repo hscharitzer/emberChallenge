@@ -25,15 +25,12 @@
 				<tr>
 					<td>{{fa-icon "map-marker"}}</td><td>{{this.model.encoded_trace}}</td>
 				</tr>
-
-				{{outlet}}
-
 			</table>
 
 		</div>
 
 		<div class="col s12 l6">
-			<div id="run-trace" class="run-trace">
+			<div id="run-trace" class="run-trace" data-trace="{{this.model.encoded_trace}}">
 
 			</div>
 		</div>
