@@ -9,6 +9,7 @@ export default Ember.View.extend({
 				var paginator = $("#inline-pagination");
 				var footer = $("#sticky-pagination");
 
+
 				if(paginator.isOnScreen(0.2, 0.2)) {
 					//footer.hide();
 					footer.fadeOut("fast");
@@ -20,9 +21,10 @@ export default Ember.View.extend({
 
 			footerStickyAlternative();
 
+			/* jshint ignore:start */
 			$(window).on('resize', null, footerStickyAlternative);
-
 			$(window).on('scroll', null, footerStickyAlternative);
+			/* jshint ignore:end */
 		});
 	}
 });

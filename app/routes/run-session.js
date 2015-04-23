@@ -16,6 +16,7 @@ export default Ember.Route.extend({
 			params.page = page;
 		}
 
+		/* jshint ignore:start */
 		if(params.sort_by) {
 			if($.inArray(params.sort_by, ['id', 'start_time', 'end_time', 'duration', 'distance']) === -1) {
 				params.sort_by = 'id';
@@ -27,6 +28,7 @@ export default Ember.Route.extend({
 				params.order = 'desc';
 			}
 		}
+		/* jshint ignore:end */
 
 		return this.store.find('run_session', params);
 	},
